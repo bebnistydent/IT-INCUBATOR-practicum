@@ -1,14 +1,22 @@
-import type {TaskType} from './Types.ts'
+import {FilterValuesType, TaskType} from './Types.ts'
 import {Button} from './Button'
 
 type Props = {
     title: string
     tasks: TaskType[]
     deleteTask: (taskId: TaskType["id"]) => void
+    changeTodolistFilter: (filter: FilterValuesType) => void
 }
 
-export const TodolistItem = ({title, tasks, deleteTask}: Props) => {
-  return (
+export const TodolistItem = (props: Props) => {
+  const {
+      title,
+      tasks,
+      deleteTask,
+      changeTodolistFilter,
+        } = props
+
+    return (
       <div>
         <h3>{title}</h3>
         <div>
@@ -32,9 +40,9 @@ export const TodolistItem = ({title, tasks, deleteTask}: Props) => {
             </ul>
         )}
         <div>
-          <Button title={'All'} />
-          <Button title={'Active'} />
-          <Button title={'Completed'} />
+          <Button title={'All'} onClickHandler={() => changeTodolistFilter('all')}/>
+          <Button title={'Active'} onClickHandler={() => changeTodolistFilter('active')}/>
+          <Button title={'Completed'} onClickHandler={() => changeTodolistFilter('completed')}/>
         </div>
       </div>
   )
