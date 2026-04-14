@@ -1,96 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d3ac6cfc-6bf0-4a03-8f35-f8ce9e140d06" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/Button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/TodolistItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/Types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 lesson/vite.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/src/Button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/src/TodolistItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Week-01 project/todolist-02/vite.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/app/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/app/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/app/Main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/app/app-slice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/app/store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/components/CreateItemForm/CreateItemForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/components/EditableSpan/EditableSpan.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/components/Header/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/components/NavButton/NavButton.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/components/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/enums/enums.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/enums/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/hooks/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/hooks/useAppDispatch.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/hooks/useAppSelector.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/instance/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/instance/instance.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/styles/container.styles.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/styles/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/theme/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/theme/theme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/types/types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/utils/createAppSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/common/utils/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/api/tasksApi.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/api/tasksApi.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/api/todolistsApi.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/api/todolistsApi.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/model/__tests__/tasks-slice.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/model/__tests__/todolists-slice.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/model/tasks-slice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/model/todolists-slice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/TodolistItem/FilterButtons/FilterButtons.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/TodolistItem/Tasks/TaskItem/TaskItem.styles.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/TodolistItem/Tasks/TaskItem/TaskItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/TodolistItem/Tasks/Tasks.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/TodolistItem/TodolistItem.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/TodolistItem/TodolistTitle/TodolistTitle.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/TodolistItem/TodolistTitle/TodolistTitle.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/features/todolists/ui/Todolists/Todolists.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Sprint-4/Week-3/vite.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-01/Week-01 repeat/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week-01/Week-01 repeat/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-01/Week-01 repeat/pnpm-lock.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-01/Week-01 repeat/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Week-01/Week-01 repeat/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-01/Week-01 repeat/src/TaskType.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Week-01/Week-01 repeat/src/TodolistItem.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Type.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +30,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Git/React-NativeJS-IT-Incubator/IT-INCUBATOR-practicum/Sprint-1/Week-02/Week-02 repeat&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "D:/Git/React-NativeJS-IT-Incubator/oh-shit-Here-we-go-agein/Sprint-1/Week-02/Week-02repeat",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\Git\\React-NativeJS-IT-Incubator\\IT-INCUBATOR-practicum\\Sprint-1\\Week-02\\Week-02 repeat\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -133,6 +61,13 @@
       <updated>1776017619268</updated>
       <workItem from="1776017620417" duration="3000" />
       <workItem from="1776017630958" duration="1000" />
+      <workItem from="1776072117079" duration="50000" />
+      <workItem from="1776072967942" duration="5086000" />
+      <workItem from="1776081791425" duration="2133000" />
+      <workItem from="1776083990021" duration="129000" />
+      <workItem from="1776084201601" duration="1265000" />
+      <workItem from="1776085519307" duration="1993000" />
+      <workItem from="1776165148740" duration="27000" />
     </task>
     <servers />
   </component>
