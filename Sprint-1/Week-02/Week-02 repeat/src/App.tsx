@@ -1,7 +1,7 @@
 import './App.css'
 import {TodolistItem} from './TodolistItem'
 import {FilteredTasksType, Task} from "./Types.ts";
-import {useMemo, useState} from "react";
+import { useState} from "react";
 
 
 
@@ -24,7 +24,7 @@ export const App = () => {
     const changeFilter = (newFilter: FilteredTasksType) => {
         setFilter(newFilter)
     }
-    const getFilteredTasks = useMemo(() => {
+    const getFilteredTasks = (tasks: Task[], filter: FilteredTasksType): Task[] => {
         switch (filter) {
             case 'active':
                 return tasks.filter((t) => !t.isDone)
@@ -33,13 +33,13 @@ export const App = () => {
             default:
                 return tasks
         }
-    }, [filter, setFilter]);
+    }
 
   return (
       <div className="app">
         <TodolistItem
             title="What to learn"
-            tasks={getFilteredTasks}
+            tasks={getFilteredTasks(tasks, filter)}
             deleteTask={deleteTask}
             changeFilter={changeFilter}
         />
