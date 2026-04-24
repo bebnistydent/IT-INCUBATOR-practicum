@@ -1,5 +1,5 @@
 export type Task = {
-    id: string
+    id: number
     title: string
     isDone: boolean
 }
@@ -9,7 +9,6 @@ export type TasksItemProps = {
     tasks: Task[]
     deleteTask: (taskID: Task["id"]) => void
     filteredTasks: (newFilter: FilteredTaskValues) => void
-    createTasks: (title: Task['title']) => void
 }
 
 export type FilteredTaskValues = 'all' | 'active' | 'completed'

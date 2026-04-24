@@ -1,49 +1,48 @@
 import './App.css'
-import {useState} from 'react'
-import {TodolistItem} from './TodolistItem'
+import {TasksItem} from "./TasksItem.tsx";
+import {useState} from "react";
+import {FilteredTaskValues, Task} from "./Types.ts";
 
-export type Task = {
-  id: number
-  title: string
-  isDone: boolean
-}
-
-export type FilterValues = 'all' | 'active' | 'completed'
-
-export const App = () => {
-  const [filter, setFilter] = useState<FilterValues>('all')
+function App() {
 
   const [tasks, setTasks] = useState<Task[]>([
-    { id: 1, title: 'HTML&CSS', isDone: true },
-    { id: 2, title: 'JS', isDone: true },
-    { id: 3, title: 'ReactJS', isDone: false },
-  ])
+    {id: 1, title: "HTML", isDone: true},
+    {id: 2, title: "CSS", isDone: false},
+    {id: 3, title: "Java-Script", isDone: true},
+    {id: 4, title: "React", isDone: true},
+    {id: 5, title: "Node.js", isDone: false},
+  ]);
 
-  const deleteTask = (taskId: number) => {
-    const filteredTasks = tasks.filter(task => {
-      return task.id !== taskId
-    })
-    setTasks(filteredTasks)
+  const deleteTask = (taskID: Task["id"]) => {
+    const filteredTask = tasks.filter(task => task.id !== taskID)
+    setTasks(filteredTask)
   }
 
-  const changeFilter = (filter: FilterValues) => {
-    setFilter(filter)
+  const [filter, setFilter] = useState<FilteredTaskValues>("all")
+  const filteredTasks = (newFilter: FilteredTaskValues) => {
+    setFilter(newFilter)
   }
-
-  let filteredTasks = tasks
-  if (filter === 'active') {
-    filteredTasks = tasks.filter(task => !task.isDone)
-  }
-  if (filter === 'completed') {
-    filteredTasks = tasks.filter(task => task.isDone)
+  const getFilteredTasks = (task: Task[], filter: FilteredTaskValues) => {
+     switch (filter) {
+       case "active":
+         return task.filter(t => !t.isDone)
+       case "completed":
+         return task.filter(t => t.isDone)
+       default:
+         return task
+     }
   }
 
   return (
       <div className="app">
-        <TodolistItem title="What to learn"
-                      tasks={filteredTasks}
-                      deleteTask={deleteTask}
-                      changeFilter={changeFilter}/>
+       <TasksItem
+           title={'What to learn'}
+           tasks = {getFilteredTasks(tasks, filter)}
+           deleteTask={deleteTask}
+           filteredTasks={filteredTasks}
+       />
       </div>
   )
 }
+
+export default App
