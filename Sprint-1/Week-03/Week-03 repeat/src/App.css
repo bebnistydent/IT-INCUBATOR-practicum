@@ -6,3 +6,10 @@
 .app > div {
   margin-right: 50px;
 }
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 6px;
+  font-weight: 500;
+}
