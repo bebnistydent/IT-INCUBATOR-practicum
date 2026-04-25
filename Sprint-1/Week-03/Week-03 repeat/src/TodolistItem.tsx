@@ -1,20 +1,27 @@
-import type {FilterValues, Task} from './App'
 import {Button} from './Button'
+import {useState} from "react";
+import {Props} from './Types.ts';
 
-type Props = {
-  title: string
-  tasks: Task[]
-  deleteTask: (taskId: number) => void
-  changeFilter: (filter: FilterValues) => void
-}
 
-export const TodolistItem = ({title, tasks, deleteTask, changeFilter}: Props) => {
-  return (
+
+export const TodolistItem = ({title, tasks, deleteTask, changeFilter, createTask}: Props) => {
+
+    const [newTaskTitle, setNewTaskTitle] = useState("")
+    const createTaskHandler = () => {
+        createTask(newTaskTitle)
+        setNewTaskTitle("")
+    }
+    return (
       <div>
         <h3>{title}</h3>
         <div>
-          <input/>
-          <Button title={'+'} />
+          <input value = {newTaskTitle}
+                 onChange={event => setNewTaskTitle(event.currentTarget.value)}
+                 onKeyDown={event => event.key === "Enter" ? createTaskHandler() : undefined}
+          />
+
+          <Button title={'+'}  onClickHandler = {createTaskHandler} />
+
         </div>
         {tasks.length === 0 ? (
             <p>Тасок нет</p>
@@ -23,18 +30,25 @@ export const TodolistItem = ({title, tasks, deleteTask, changeFilter}: Props) =>
               {tasks.map(task => {
                 return (
                     <li key={task.id}>
-                      <input type="checkbox" checked={task.isDone}/>
+                      <input type="checkbox" checked={task.isDone}
+                             onChange={event => setNewTaskTitle(event.currentTarget.value)}
+                             onKeyDown = {event => {
+                              if(event.key === "Enter") {
+                                  createTaskHandler()
+                              }
+
+                          }}/>
                       <span>{task.title}</span>
-                      <Button title={'x'} onClick={() => deleteTask(task.id)} />
+                      <Button title={'x'} onClickHandler={() => deleteTask(task.id)} />
                     </li>
                 )
               })}
             </ul>
         )}
         <div>
-          <Button title={'All'} onClick={() => changeFilter('all')}/>
-          <Button title={'Active'} onClick={() => changeFilter('active')}/>
-          <Button title={'Completed'} onClick={() => changeFilter('completed')}/>
+          <Button title={'All'} onClickHandler={() => changeFilter('all')}/>
+          <Button title={'Active'} onClickHandler={() => changeFilter('active')}/>
+          <Button title={'Completed'} onClickHandler={() => changeFilter('completed')}/>
         </div>
       </div>
   )
