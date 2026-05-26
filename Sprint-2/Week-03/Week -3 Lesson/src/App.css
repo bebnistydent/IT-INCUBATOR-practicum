@@ -1,0 +1,28 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+ 
+.container {
+  display: flex;
+  align-items: center;
+}
+.task {
+  font-weight: bold;
+}
+.task-done {
+  text-decoration: line-through;
+  font-style: italic;
+  opacity: 0.5;
+}
+.filter-btn-active {
+  color: white;
+  background-color: #081e47;
+  border: 2px solid cornflowerblue;
+  border-radius: 5px;
+}
+.error {
+  border: 2px solid red;
+  outline: none;
+}
