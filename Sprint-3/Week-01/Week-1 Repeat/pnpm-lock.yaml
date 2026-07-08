@@ -22,13 +22,16 @@ importers:
         version: 6.3.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react@19.0.0))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@reduxjs/toolkit':
         specifier: ^2.12.0
-        version: 2.12.0(react@19.0.0)
+        version: 2.12.0(react-redux@9.3.0(@types/react@19.0.2)(react@19.0.0)(redux@5.0.1))(react@19.0.0)
       react:
         specifier: 19.0.0
         version: 19.0.0
       react-dom:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
+      react-redux:
+        specifier: ^9.3.0
+        version: 9.3.0(@types/react@19.0.2)(react@19.0.0)(redux@5.0.1)
       uuid:
         specifier: 11.0.3
         version: 11.0.3
@@ -829,6 +832,9 @@ packages:
   '@types/react@19.0.2':
     resolution: {integrity: sha512-USU8ZI/xyKJwFTpjSVIrSeHBVAGagkHQKPNbxeWwql/vDmnTIBgx+TJnhFnj1NXgz8XfprU0egV2dROLGpsBEg==}
 
+  '@types/use-sync-external-store@0.0.6':
+    resolution: {integrity: sha512-zFDAD+tlpf2r4asuHEj0XH6pY6i0g5NeAHPn+15wk3BV6JA69eERFXC1gyGThDkVa1zCyKr5jox1+2LbV/AMLg==}
+
   '@vitejs/plugin-react-swc@3.7.2':
     resolution: {integrity: sha512-y0byko2b2tSVVf5Gpng1eEhX1OvPC7x8yns1Fx8jDzlJp4LS6CMkCPfLw47cjyoMrshQDoQw4qcgjsU9VvlCew==}
     peerDependencies:
@@ -1066,6 +1072,18 @@ packages:
   react-is@19.2.7:
     resolution: {integrity: sha512-kZFnouyVv7eP/Phmrlo9FK+zcAdriZJvzxXHF1Sl1P377WSGe2G/JxVolhTrB/jeV47lKImhNUsijjHAAbcl/A==}
 
+  react-redux@9.3.0:
+    resolution: {integrity: sha512-KQopgqFo/p/fgmAs5qz6p5RWaNAzq40WAu7fJIXnQpYxFPbJYtsJPWvGeF2rOBaY/kEuV77AVsX8TsQzKm+A/g==}
+    peerDependencies:
+      '@types/react': ^18.2.25 || ^19
+      react: ^18.0 || ^19
+      redux: ^5.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      redux:
+        optional: true
+
   react-transition-group@4.4.5:
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
     peerDependencies:
@@ -1150,6 +1168,11 @@ packages:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  use-sync-external-store@1.6.0:
+    resolution: {integrity: sha512-Pp6GSwGP/NrPIrxVFAIkOQeyw8lFenOHijQWkUTrDvrF4ALqylP2C/KCkeS9dpUM3KvYRQhna5vt7IL95+ZQ9w==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   uuid@11.0.3:
     resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
@@ -1657,7 +1680,7 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@reduxjs/toolkit@2.12.0(react@19.0.0)':
+  '@reduxjs/toolkit@2.12.0(react-redux@9.3.0(@types/react@19.0.2)(react@19.0.0)(redux@5.0.1))(react@19.0.0)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@standard-schema/utils': 0.3.0
@@ -1667,6 +1690,7 @@ snapshots:
       reselect: 5.2.0
     optionalDependencies:
       react: 19.0.0
+      react-redux: 9.3.0(@types/react@19.0.2)(react@19.0.0)(redux@5.0.1)
 
   '@rollup/rollup-android-arm-eabi@4.62.2':
     optional: true
@@ -1824,6 +1848,8 @@ snapshots:
   '@types/react@19.0.2':
     dependencies:
       csstype: 3.2.3
+
+  '@types/use-sync-external-store@0.0.6': {}
 
   '@vitejs/plugin-react-swc@3.7.2(vite@6.0.6)':
     dependencies:
@@ -2089,6 +2115,15 @@ snapshots:
 
   react-is@19.2.7: {}
 
+  react-redux@9.3.0(@types/react@19.0.2)(react@19.0.0)(redux@5.0.1):
+    dependencies:
+      '@types/use-sync-external-store': 0.0.6
+      react: 19.0.0
+      use-sync-external-store: 1.6.0(react@19.0.0)
+    optionalDependencies:
+      '@types/react': 19.0.2
+      redux: 5.0.1
+
   react-transition-group@4.4.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@babel/runtime': 7.29.7
@@ -2175,6 +2210,10 @@ snapshots:
   tinyspy@3.0.2: {}
 
   typescript@5.7.2: {}
+
+  use-sync-external-store@1.6.0(react@19.0.0):
+    dependencies:
+      react: 19.0.0
 
   uuid@11.0.3: {}
 
