@@ -1,103 +1,66 @@
 import {type ChangeEvent, type CSSProperties, useEffect, useState} from 'react'
 import Checkbox from '@mui/material/Checkbox'
-import {CreateItemForm} from '@/common/components/CreateItemForm/CreateItemForm'
-import {EditableSpan} from '@/common/components/EditableSpan/EditableSpan'
-import axios from 'axios'
+import {CreateItemForm, EditableSpan} from "@/common/components";
+import {todolistsApi} from "@/features/todolists/api/todolistsApi.ts";
+import {Todolist} from "@/features/todolists/api/todolistsApi.types.ts";
+import {tasksApi} from "@/features/tasks/api/tasksApi.ts";
 
-export type Todolist = {
-  id: string
-  title: string
-  addedDate: string
-  order: number
-}
-
-export type FieldError = {
-  error: string
-  field: string
-}
-
-type createTodolistResponse = {
-  data: {item: Todolist}
-  resultCode: number
-  messages: string[]
-  fieldErrors: FieldError[]
-}
-
-type DeleteTodolistResponse = {
-  resultCode: number
-  message: string[]
-  fieldError: FieldError[]
-}
 
 export const AppHttpRequests = () => {
   const [todolists, setTodolists] = useState<Todolist[]>([])
   const [tasks, setTasks] = useState<any>({})
 
-  const token = "98714a01-768c-423f-ab4e-10de101774cc"
-  const apiKey = '76e44ca2-0240-4e38-b628-979621142900'
+
 
   useEffect(() => {
     // get todolists
-    axios
-        .get<Todolist[]>('https://social-network.samuraijs.com/api/1.1/todo-lists', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        .then(res => setTodolists(res.data))
+      todolistsApi.getTodolists().then(res => setTodolists(res.data))
 
   }, [])
 
   const createTodolist = (title: string) => {
-    axios
-        .post<createTodolistResponse>(
-            'https://social-network.samuraijs.com/api/1.1/todo-lists',
-            {title},
-            {
-              headers: {
-                Authorization: `Bearer ${token}`,
-                'API-KEY': apiKey,
-              },
-            }
-        ).then(res => {
+      todolistsApi.createTodolist(title).then(res => {
           const newTodolist = res.data.data.item
           setTodolists([newTodolist, ...todolists])
-    })
+      })
   }
 
 
   const deleteTodolist = (id: string) => {
-    axios
-        .delete<DeleteTodolistResponse>(`https://social-network.samuraijs.com/api/1.1/todo-lists/${id}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'API-KEY': apiKey,
-          },
-        })
-        .then(res =>{
-          if(res.data.resultCode === 0) {
-            setTodolists(todolists.filter(tl => tl.id !== id))
-          } else {
-            console.error("Error! Delete has failed", res.data.message)
-          }
-        }).catch(error => console.error('Request error', error))
+      todolistsApi.deleteTodolist(id)
+          .then(res => {
+              if (res.data.resultCode === 0) {
+                  setTodolists(todolists.filter(tl => tl.id !== id))
+              } else {
+                  console.error('Error! Delete has failed', res.data.message)
+              }
+          })
+          .catch(error => console.error('Request error', error))
   }
 
-  const changeTodolistTitle = (id: string, title: string) => {
-    axios
-        .put(
-            `https://social-network.samuraijs.com/api/1.1/todo-lists/${id}`,
-            {title},
-            {
-              headers: {
-                Authorization: `Bearer ${token}`,
-                'API-KEY': apiKey,
-              },
-            }
-        ).then(res => console.log(res.data))
-  }
+    const changeTodolistTitle = (id: string, title: string) => {
+        todolistsApi.changeTodolistTitle({id, title}).then(res => {
+                if (res.data.resultCode === 0) {
+                    // ✅ Успешно обновили на сервере — обновляем в state
+                    setTodolists(todolists.map(tl =>
+                        tl.id === id ? { ...tl, title } : tl
+                    ))
+                } else {
+                    console.error("Error! Update has failed", res.data.message)
+                }
+            })
+            .catch(error => console.error('Request error', error))
+    }
 
-  const createTask = (todolistId: string, title: string) => {}
+  const createTask = (todolistId: string, title: string) => {
+      tasksApi.createTask(todolistId, title).then(res => {
+          const newTask = res.data.data.item
+          setTasks({
+              ...tasks,
+              [todolistId]: [newTask, ...(tasks[todolistId] || [])]
+          })
+      })
+  }
 
   const deleteTask = (todolistId: string, taskId: string) => {}
 
